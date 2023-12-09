@@ -100,8 +100,8 @@ export default function Layout({ children, onLogout, user }) {
                     <ul class="space-y-2 font-medium">
                         <li>
                             <Link
-                                to="/cms-user-profile"
-                                className={`flex text-wedvita-text-light-purple items-center p-2 rounded-lg hover:bg-gray-100 hover:text-black group ${location.pathname === '/cms-user-profile' ? 'bg-gray-100 text-black' : 'text-gray-900'
+                                to="/dashboard"
+                                className={`flex text-wedvita-text-light-purple items-center p-2 rounded-lg hover:bg-gray-100 hover:text-black group ${location.pathname === '/dashboard' ? 'bg-gray-100 text-black' : 'text-gray-900'
                                     }`}
                             >
                                 <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 group-hover:text-gray-900" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
@@ -123,12 +123,18 @@ export default function Layout({ children, onLogout, user }) {
                             <ul id="dropdown-example" className={`${isDropdownOpen ? 'block' : 'hidden'
                                 } py-2 space-y-2 mt-2 origin-top-right right-0`}>
                                 <li>
-                                    <Link class="flex items-center p-2 text-gray-900 rounded-lg text-wedvita-text-light-purple hover:bg-gray-100 hover:text-black group">
+                                    <Link
+                                        to="/datapengeluaran"
+                                        className={`flex text-wedvita-text-light-purple items-center p-2 rounded-lg hover:bg-gray-100 hover:text-black group ${location.pathname === '/datapengeluaran' ? 'bg-gray-100 text-black' : 'text-gray-900'
+                                            }`}>
                                         <span class="ml-3 text-slate-400">Data Pengeluaran</span>
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link class="flex items-center p-2 text-gray-900 rounded-lg text-wedvita-text-light-purple hover:bg-gray-100 hover:text-black group">
+                                    <Link
+                                        to="/datakatpengeluaran"
+                                        className={`flex text-wedvita-text-light-purple items-center p-2 rounded-lg hover:bg-gray-100 hover:text-black group ${location.pathname === '/datakatpengeluaran' ? 'bg-gray-100 text-black' : 'text-gray-900'
+                                            }`}>
                                         <span class="ml-3 text-slate-400">Kategori Pengeluaran</span>
                                     </Link>
                                 </li>
@@ -151,12 +157,18 @@ export default function Layout({ children, onLogout, user }) {
                                 } py-2 space-y-2 mt-2 origin-top-right right-0`}>
                                 <li>
                                     <li>
-                                        <Link class="flex items-center p-2 text-gray-900 rounded-lg text-wedvita-text-light-purple hover:bg-gray-100 hover:text-black group">
+                                        <Link
+                                            to="/datapemasukan"
+                                            className={`flex text-wedvita-text-light-purple items-center p-2 rounded-lg hover:bg-gray-100 hover:text-black group ${location.pathname === '/datapemasukan' ? 'bg-gray-100 text-black' : 'text-gray-900'
+                                                }`}>
                                             <span class="ml-3 text-slate-400">Data Pemasukan</span>
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link class="flex items-center p-2 text-gray-900 rounded-lg text-wedvita-text-light-purple hover:bg-gray-100 hover:text-black group">
+                                        <Link
+                                            to="/datakatpemasukan"
+                                            className={`flex text-wedvita-text-light-purple items-center p-2 rounded-lg hover:bg-gray-100 hover:text-black group ${location.pathname === '/datakatpemasukan' ? 'bg-gray-100 text-black' : 'text-gray-900'
+                                                }`}>
                                             <span class="ml-3 text-slate-400">Kategori Pemasukan</span>
                                         </Link>
                                     </li>
@@ -164,8 +176,10 @@ export default function Layout({ children, onLogout, user }) {
                             </ul>
                         </li>
                         <li>
-                            <Link className="flex text-wedvita-text-light-purple items-center p-2 rounded-lg hover:bg-gray-100 hover:text-black group">
-
+                            <Link
+                                to="/datahutang"
+                                className={`flex text-wedvita-text-light-purple items-center p-2 rounded-lg hover:bg-gray-100 hover:text-black group ${location.pathname === '/datahutang' ? 'bg-gray-100 text-black' : 'text-gray-900'
+                                    }`}>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white">
                                     <path d="M4.5 3.75a3 3 0 00-3 3v.75h21v-.75a3 3 0 00-3-3h-15z" />
                                     <path fill-rule="evenodd" d="M22.5 9.75h-21v7.5a3 3 0 003 3h15a3 3 0 003-3v-7.5zm-18 3.75a.75.75 0 01.75-.75h6a.75.75 0 010 1.5h-6a.75.75 0 01-.75-.75zm.75 2.25a.75.75 0 000 1.5h3a.75.75 0 000-1.5h-3z" clip-rule="evenodd" />
@@ -175,8 +189,10 @@ export default function Layout({ children, onLogout, user }) {
                             </Link>
                         </li>
                         <li>
-                            <Link className="flex text-wedvita-text-light-purple items-center p-2 rounded-lg hover:bg-gray-100 hover:text-black group">
-
+                        <Link
+                                to="/datawishlist"
+                                className={`flex text-wedvita-text-light-purple items-center p-2 rounded-lg hover:bg-gray-100 hover:text-black group ${location.pathname === '/datawishlist' ? 'bg-gray-100 text-black' : 'text-gray-900'
+                                    }`}>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white">
                                     <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
                                 </svg>
@@ -186,8 +202,10 @@ export default function Layout({ children, onLogout, user }) {
                             </Link>
                         </li>
                         <li>
-                            <Link className="flex text-wedvita-text-light-purple items-center p-2 rounded-lg hover:bg-gray-100 hover:text-black group">
-
+                        <Link
+                                to="/datariwayat"
+                                className={`flex text-wedvita-text-light-purple items-center p-2 rounded-lg hover:bg-gray-100 hover:text-black group ${location.pathname === '/datariwayat' ? 'bg-gray-100 text-black' : 'text-gray-900'
+                                    }`}>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white">
                                     <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM12.75 6a.75.75 0 00-1.5 0v6c0 .414.336.75.75.75h4.5a.75.75 0 000-1.5h-3.75V6z" clip-rule="evenodd" />
                                 </svg>
@@ -196,8 +214,10 @@ export default function Layout({ children, onLogout, user }) {
                             </Link>
                         </li>
                         <li>
-                            <Link className="flex text-wedvita-text-light-purple items-center p-2 rounded-lg hover:bg-gray-100 hover:text-black group">
-
+                        <Link
+                                to="/datarekapbulanan"
+                                className={`flex text-wedvita-text-light-purple items-center p-2 rounded-lg hover:bg-gray-100 hover:text-black group ${location.pathname === '/datarekapbulanan' ? 'bg-gray-100 text-black' : 'text-gray-900'
+                                    }`}>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white">
                                     <path fill-rule="evenodd" d="M6.75 2.25A.75.75 0 017.5 3v1.5h9V3A.75.75 0 0118 3v1.5h.75a3 3 0 013 3v11.25a3 3 0 01-3 3H5.25a3 3 0 01-3-3V7.5a3 3 0 013-3H6V3a.75.75 0 01.75-.75zm13.5 9a1.5 1.5 0 00-1.5-1.5H5.25a1.5 1.5 0 00-1.5 1.5v7.5a1.5 1.5 0 001.5 1.5h13.5a1.5 1.5 0 001.5-1.5v-7.5z" clip-rule="evenodd" />
                                 </svg>
@@ -209,7 +229,7 @@ export default function Layout({ children, onLogout, user }) {
                     </ul>
                     <ul class="pt-4 mt-4 space-y-2 font-medium border-t border-gray-200 dark:border-gray-700">
                         <li>
-                            <Link class="flex items-center p-2 text-gray-900 rounded-lg text-wedvita-text-light-purple hover:bg-gray-100 hover:text-black group">
+                            <Link to='/login' class="flex items-center p-2 text-gray-900 rounded-lg text-wedvita-text-light-purple hover:bg-gray-100 hover:text-black group">
                                 <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 group-hover:text-gray-900" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 16">
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 8h11m0 0L8 4m4 4-4 4m4-11h3a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-3" />
                                 </svg>
@@ -275,7 +295,7 @@ export default function Layout({ children, onLogout, user }) {
                                                             <Menu.Item>
                                                                 {({ active }) => (
                                                                     <Link
-                                                                        onClick={onLogout}
+                                                                        to='/login'
                                                                         className={classNames(
                                                                             active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
                                                                             'block px-4 py-2 text-sm'

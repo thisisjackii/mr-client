@@ -13,6 +13,10 @@ import DataWishlist from './DataWishlist';
 import DataRekapBulanan from './DataRekapBulanan';
 import DataRiwayat from './DataRiwayat';
 import CreateHutang from './CreateForm/CreateHutang';
+import CreatePengeluaran from './CreateForm/CreatePengeluaran';
+import CreatePemasukan from './CreateForm/CreatePemasukan';
+import CreateWishlist from './CreateForm/CreateWishlist';
+import CreateRiwayatMenabung from './CreateForm/CreateRiwayatMenabung';
 
 const AppRouter = () => {
   return (
@@ -23,13 +27,17 @@ const AppRouter = () => {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/datapengeluaran" element={<DataPengeluaran />} />
         <Route path="/datakatpengeluaran" element={<DataKatPengeluaran />} />
-        <Route path="/datakatpengeluaran" element={<DataPemasukan />} />
+        <Route path="/datapemasukan" element={<DataPemasukan />} />
         <Route path="/datakatpemasukan" element={<DataKatPemasukan />} />
         <Route path="/datahutang" element={<DataHutang />} />      
         <Route path="/datawishlist" element={<DataWishlist />} />  
-        <Route path="/datarekapbulanan" element={<DataRekapBulanan />} />
         <Route path="/datariwayat" element={<DataRiwayat />} />
-        <Route path="/createhutang" element={<CreateHutang/>} />                       
+        <Route path="/datarekapbulanan" element={<DataRekapBulanan />} />
+        <Route path="/createhutang" element={<CreateHutang/>} />  
+        <Route path="/createpengeluaran" element={<CreatePengeluaran/>} />
+        <Route path="/createpemasukan" element={<CreatePemasukan/>} />
+        <Route path="/createwishlist" element={<CreateWishlist/>} />
+        <Route path="/createriwayatmenabung" element={<CreateRiwayatMenabung/>} />
       </Routes>
     </Router>
   );

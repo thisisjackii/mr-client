@@ -6,9 +6,9 @@ function DataRiwayat() {
     return (
         <Layout>
             <div class="flex justify-between ...">
-                <div className="text-xl font-extrabold mb-4">Data Pemasukan</div>
+                <div className="text-xl font-extrabold mb-4">Data Riwayat Menabung</div>
                 <td class="px-6 py-4 text-right">
-                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">+ Tambah Data</a>
+                    <a href="/createriwayatmenabung" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">+ Tambah Data</a>
                 </td>
             </div>
 
