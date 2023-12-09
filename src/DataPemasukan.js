@@ -1,8 +1,25 @@
 import Layout from './CMSLayout';
 import React from 'react';
 import './App.css';
+import { useEffect, useState } from 'react'
+import axios from 'axios';
 
 function DataPemasukan() {
+
+    const [pemasukanData, setPemasukanData] = useState([]);
+    useEffect(() => {
+        axios
+            .get(`http://localhost:3000/pemasukan/read-pemasukan`)
+            .then((response) => {
+                setPemasukanData(response.data);
+                console.log(response.data);
+            })
+            .catch((error) => {
+                console.error('Error fetching data: ', error);
+            });
+
+    }, [setPemasukanData]);
+
     return (
         <Layout>
             <div class="flex justify-between ...">
@@ -21,38 +38,27 @@ function DataPemasukan() {
                                     <thead class="border-b font-medium dark:border-neutral-500">
                                         <tr>
                                             <th scope="col" class="px-6 py-4">#</th>
+                                            <th scope="col" class="px-6 py-4">ID User</th>
                                             <th scope="col" class="px-6 py-4">Kategori</th>
                                             <th scope="col" class="px-6 py-4">Nominal</th>
                                             <th scope="col" class="px-6 py-4">Metode Pembayaran</th>
                                             <th scope="col" class="px-6 py-4">Tanggal</th>
-                                            <th scope="col" class="px-6 py-4">Deskripsi</th>                                            
+                                            <th scope="col" class="px-6 py-4">Deskripsi</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr class="border-b dark:border-neutral-500">
-                                            <td class="whitespace-nowrap px-6 py-4 font-medium">1</td>
-                                            <td class="whitespace-nowrap px-6 py-4">Cell</td>
-                                            <td class="whitespace-nowrap px-6 py-4">Cell</td>
-                                            <td class="whitespace-nowrap px-6 py-4">Cell</td>
-                                            <td class="whitespace-nowrap px-6 py-4">Cell</td>
-                                            <td class="whitespace-nowrap px-6 py-4">Cell</td>
-                                        </tr>
-                                        <tr class="border-b dark:border-neutral-500">
-                                            <td class="whitespace-nowrap px-6 py-4 font-medium ">2</td>
-                                            <td class="whitespace-nowrap px-6 py-4">Cell</td>
-                                            <td class="whitespace-nowrap px-6 py-4">Cell</td>
-                                            <td class="whitespace-nowrap px-6 py-4">Cell</td>
-                                            <td class="whitespace-nowrap px-6 py-4">Cell</td>
-                                            <td class="whitespace-nowrap px-6 py-4">Cell</td>
-                                        </tr>
-                                        <tr class="border-b ">
-                                            <td class="whitespace-nowrap px-6 py-4 font-medium ">3</td>
-                                            <td class="whitespace-nowrap px-6 py-4">Cell</td>
-                                            <td class="whitespace-nowrap px-6 py-4">Cell</td>
-                                            <td class="whitespace-nowrap px-6 py-4">Cell</td>
-                                            <td class="whitespace-nowrap px-6 py-4">Cell</td>
-                                            <td class="whitespace-nowrap px-6 py-4">Cell</td>
-                                        </tr>
+                                        {pemasukanData.map((pemasukan, index) => (
+                                            <tr className="border-b dark:border-neutral-500" key={index}>
+                                                <td className="whitespace-nowrap px-6 py-4 font-medium">{pemasukan[0]}</td>
+                                                <td className="whitespace-nowrap px-6 py-4">{pemasukan[1]}</td>
+                                                <td className="whitespace-nowrap px-6 py-4">{pemasukan[2]}</td>
+                                                <td className="whitespace-nowrap px-6 py-4">{pemasukan[3]}</td>
+                                                <td className="whitespace-nowrap px-6 py-4">{pemasukan[4]}</td>
+                                                <td className="whitespace-nowrap px-6 py-4">{pemasukan[5]}</td>
+                                                <td className="whitespace-nowrap px-6 py-4">{pemasukan[6]}</td>
+                                            </tr>
+                                        ))}
+
                                     </tbody>
                                 </table>
                             </div>
