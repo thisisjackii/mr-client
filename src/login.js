@@ -1,7 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
+import React from 'react';
 
-function App() {
+function Login() {
   return (
     <div className="App">
       <section class="bg-gray-50 dark:bg-gray-900">
@@ -48,4 +49,4 @@ function App() {
   );
 }
 
-export default App;
+export default Login;
